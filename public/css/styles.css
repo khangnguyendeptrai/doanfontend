@@ -21,10 +21,12 @@
 
 .logo {
     font-size: 1.5em;
-    padding-right: 20px;
-    padding-left: 30px;
+    /* padding-right: 20px; */
+    /* padding-left: 30px; */
 }
-
+.btn-nav-mb{
+    margin-right: 40px;
+}
 .box-carousel {
     min-height: 300px;
 }
@@ -86,6 +88,7 @@
 
 .item1:hover {
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 
@@ -130,6 +133,7 @@
     display: flex;
     justify-content: center;
     align-items: end;
+    transition: all 0.2s ease-in-out;
     
 }
 
@@ -142,6 +146,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease-in-out;
 }
 
 
@@ -189,16 +194,39 @@
 
 .boxx {
     /* background: #323232; */
-
      margin: 5px 10px ; 
     padding: 15px 30px;
+    overflow: hidden;
     /* display: flex !important;
     justify-content: center ; */
     /* width: 300px !important; */
     /* flex-direction: column;
     align-items: center; */
 
+
 }
+
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background: red; */
+    background: #323232;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+}
+
+
+.category:hover{
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 7px 4px 6px -1px #cecece ;
+    
+}
+.category:hover > .boxx > .item1{
+    color: rgb(240, 11, 106)
+} 
 
 .information {
     background-color: #101010;
@@ -232,16 +260,6 @@
 
 
 
-.category {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* background: red; */
-    background: #323232;
-    border-radius: 24px;
-}
-
 .bg-dashed {
     background: #323232;
     border-radius: 30px;
@@ -249,9 +267,20 @@
     justify-content: center ;
     flex-direction: column;
     align-items: center;
+    transition: all 0.2s ease-in-out;
 
 }
-
+.bg-dashed:hover{
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 7px 4px 6px -1px #cecece ;
+    
+}
+.bg-dashed:hover > .name1{
+    color: rgb(240, 11, 106)
+} 
+.bg-dashed:hover > .price{
+    color: rgb(240, 11, 106)
+} 
 .img-cover {
     min-height: 210px;
     min-width: 130px;
@@ -345,7 +374,39 @@
 @media only screen and (max-width: 767px) {
 
     /* For desktop: */
-    .category {}
+    .btn-nav-mb{
+        margin-right: 30px;
+    }
+}
+@media only screen and (max-width: 575px) {
+
+    /* For desktop: */
+    .btn-nav-mb{
+        margin-right: 20px;
+    }
+}
+@media only screen and (max-width: 426px) {
+
+    /* For desktop: */
+    .img-cover {
+        min-height: 88px;
+        min-width: 62px;
+        width: 100%;
+    }
+    
+    .img-category {
+    
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .item1{
+        font-size: 12px;
+        font-weight: 600;;
+    }
+    .title{
+        font-size: 1.6rem;
+    }
 }
 
 /* @media only screen and (max-width: 380) {
